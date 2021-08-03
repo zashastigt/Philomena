@@ -1,0 +1,412 @@
+@import "https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap";
+body {
+  background-color: #321497;
+  font-family: "Rubik", sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+#login_screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10vh;
+}
+#login_screen h1 {
+  background: linear-gradient(to right, #be9e44 20%, #cbb26a 40%, #d8c690 50%, #cbb26a 60%, #be9e44 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  margin: 0;
+}
+#login_screen h2 {
+  background: linear-gradient(to right, #be9e44 20%, #cbb26a 40%, #d8c690 50%, #cbb26a 60%, #be9e44 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  margin: 0;
+  margin-bottom: 5vh;
+}
+#login_screen #box {
+  background-color: #14083d;
+  color: #eee;
+  padding: 0px 70px;
+}
+#login_screen #box a {
+  color: #eee;
+}
+#login_screen #box input {
+  margin: 0 20px 2em 20px;
+  transform: scale(1.5);
+}
+#login_screen #box button {
+  margin: 0 20px 2em 20px;
+  transform: scale(1.5);
+}
+#login_screen #box .g-recaptcha {
+  margin-bottom: 1em;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+#afspraak_form {
+  display: flex;
+  flex-direction: column;
+  color: #be9e44;
+  width: fit-content;
+}
+#afspraak_form #afspraak_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #14083d;
+  width: 100%;
+}
+#afspraak_form #afspraak_title #tab {
+  position: relative;
+  display: flex;
+  height: fit-content;
+}
+#afspraak_form #afspraak_title #tab #line {
+  position: absolute;
+  height: 85%;
+  margin-left: 1.5%;
+  border-bottom: #be9e44 2px solid;
+}
+#afspraak_form #afspraak_title #tab h3 {
+  margin: 10px;
+}
+#afspraak_form #afspraak_content {
+  width: 100%;
+}
+#afspraak_form #afspraak_content #dienst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 55vh;
+  width: 100%;
+  background-color: #14083d;
+}
+#afspraak_form #afspraak_content #dienst #dienst_options {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 85%;
+  text-align: center;
+}
+#afspraak_form #afspraak_content #dienst #dienst_options label {
+  background-color: #14083d;
+  width: 50%;
+  height: 80%;
+  padding-top: 10%;
+}
+#afspraak_form #afspraak_content #dienst #dienst_options label:hover {
+  background-color: #230e6a;
+}
+#afspraak_form #afspraak_content #dienst #nav_dienst {
+  display: flex;
+  flex-direction: column;
+  color: red;
+}
+#afspraak_form #afspraak_content #dienst #nav_dienst #dienst_error {
+  display: none;
+}
+#afspraak_form #afspraak_content #behandeling {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
+  background-color: #14083d;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_options {
+  display: flex;
+  align-items: center;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_options #behandeling_nagels {
+  width: 50%;
+  margin: 1%;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_options #behandeling_haar {
+  width: 50%;
+  margin: 1%;
+}
+#afspraak_form #afspraak_content #behandeling h1 {
+  margin-top: 0;
+}
+#afspraak_form #afspraak_content #behandeling td {
+  width: 90%;
+  border-bottom: 1px black solid;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector {
+  display: flex;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #selector_nagels {
+  width: 50%;
+  margin: 1%;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #selector_haar {
+  width: 50%;
+  margin: 1%;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector h3 {
+  display: inline-block;
+  margin: 0;
+  width: fit-content;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector .checkbox_title {
+  display: none;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector span {
+  display: inline-block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_option[type=checkbox]:checked ~ #checkbox_ns {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_n[type=checkbox]:checked ~ #radio_ns_n {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_fm[type=checkbox]:checked ~ #radio_ns_fm {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_g[type=checkbox]:checked ~ #radio_ns_g {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_option[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_n[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_fm[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_g[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_n_error {
+  display: none;
+  color: red;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_fm_error {
+  display: none;
+  color: red;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #ns_g_error {
+  display: none;
+  color: red;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_n_error {
+  display: none;
+  color: red;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_fm_error {
+  display: none;
+  color: red;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_g_error {
+  display: none;
+  color: red;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_option[type=checkbox]:checked ~ #checkbox_nh {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_n[type=checkbox]:checked ~ #radio_nh_n {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_fm[type=checkbox]:checked ~ #radio_nh_fm {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_g[type=checkbox]:checked ~ #radio_nh_g {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_option[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_n[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_fm[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #nh_g[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #h_option[type=checkbox]:checked ~ #checkbox_h {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #h_option[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #v_option[type=checkbox]:checked ~ #checkbox_v {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #v_option[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #d_option[type=checkbox]:checked ~ #checkbox_d {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #d_option[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #hr_option[type=checkbox]:checked ~ #checkbox_hr {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #hr_option[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #k11_option[type=checkbox]:checked ~ #checkbox_k11 {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #k11_option[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #k12_option[type=checkbox]:checked ~ #checkbox_k12 {
+  display: block;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector #k12_option[type=checkbox]:checked ~ span {
+  transform: rotate(90deg);
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector .checkbox_hide {
+  display: none;
+}
+#afspraak_form #afspraak_content #behandeling #behandeling_selector .radio_hide {
+  display: none;
+}
+#afspraak_form #afspraak_content #behandeling #price {
+  align-self: center;
+}
+#afspraak_form #afspraak_content #behandeling #price h3 {
+  display: none;
+  align-self: center;
+  color: red;
+}
+#afspraak_form #afspraak_content #behandeling #creatediv {
+  display: flex;
+  align-items: center;
+}
+#afspraak_form #afspraak_content #datum_tijd {
+  visibility: hidden;
+  height: 0;
+  width: 100%;
+  background-color: #14083d;
+}
+#afspraak_form #afspraak_content #datum_tijd #calendar {
+  background-color: #230e6a;
+}
+#afspraak_form #afspraak_content #datum_tijd #external-events {
+  width: 100%;
+}
+#afspraak_form #afspraak_content #datum_tijd #external-events #event_box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#afspraak_form #afspraak_content #datum_tijd #external-events #event_box div {
+  width: fit-content;
+  color: white;
+  background-color: #321497;
+  border-color: #321497;
+  padding: 1px;
+  margin: 1px;
+}
+#afspraak_form #afspraak_content #afrekenen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  background-color: #14083d;
+}
+#afspraak_form #afspraak_content #bevestiging {
+  height: fit-content;
+  width: 100%;
+  background-color: #14083d;
+}
+#afspraak_form #afspraak_content .nav1 {
+  display: flex;
+  align-items: center;
+}
+#afspraak_form #afspraak_content .nav1 button {
+  padding: 2vh;
+  border-radius: 10%;
+}
+#afspraak_form #afspraak_content .nav2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#afspraak_form #afspraak_content .nav2 button {
+  padding: 2vh;
+  margin: 1% 5%;
+  border-radius: 10%;
+}
+
+#signout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: fit-content;
+  background-color: #14083d;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

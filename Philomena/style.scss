@@ -1,0 +1,455 @@
+@import "https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap";
+
+body {
+	background-color: #321497;
+	font-family: 'Rubik', sans-serif;
+	color: #000;
+	margin: 0;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+p {
+	font-size: 16px;
+}
+
+#login_screen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 10vh;
+	
+	h1 {
+		background: linear-gradient(to right, #be9e44 20%,#cbb26a 40%,#d8c690 50%,#cbb26a 60%,#be9e44 80%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		width: fit-content;
+		margin: 0;
+	}
+	
+	h2 {
+		background: linear-gradient(to right, #be9e44 20%,#cbb26a 40%,#d8c690 50%,#cbb26a 60%,#be9e44 80%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		width: fit-content;
+		margin: 0;
+		margin-bottom: 5vh;
+	}
+	
+	#box {
+		background-color: #14083d;
+		color: #eee;
+		padding: 0px 70px;
+		
+		a {
+			color: #eee;
+		}
+		
+		input {
+			margin: 0 20px 2em 20px;
+			transform: scale(1.5);
+		}
+		
+		button {
+			margin: 0 20px 2em 20px;
+			transform: scale(1.5);
+		}
+		
+		.g-recaptcha {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+}
+
+#afspraak_form {
+	display: flex;
+	flex-direction: column;
+	color: #be9e44;
+	width: fit-content;
+	
+	#afspraak_title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #14083d;
+		width: 100%;
+		
+		#tab {
+			position: relative;
+			display: flex;
+			height: fit-content;
+			#line {
+				position: absolute;
+				height: 85%;
+				margin-left: 1.5%;
+				border-bottom: #be9e44 2px solid;
+			}
+			h3 {
+				margin: 10px;
+			}
+		}
+	}
+	#afspraak_content {
+		width: 100%;
+
+		#dienst {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 55vh;
+			width: 100%;
+			background-color: #14083d;
+
+			#dienst_options {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				height: 85%;
+				text-align: center;
+
+				label {
+					background-color: #14083d;
+					width: 50%;
+					height: 80%;
+					padding-top: 10%;
+					&:hover {
+						background-color: #230e6a;
+					}
+				}
+			}
+			#nav_dienst {
+				display: flex;
+				flex-direction: column;
+				color: red;
+				#dienst_error {
+					display: none;
+				}	
+			}
+		}
+
+		#behandeling {
+			display: flex;
+			flex-direction: column;
+			height: fit-content;
+			width: 100%;
+			background-color: #14083d;
+			#behandeling_options {
+				display: flex;
+				align-items: center;
+				#behandeling_nagels {
+					width: 50%;
+					margin: 1%;
+				}
+				#behandeling_haar {
+					width: 50%;
+					margin: 1%;
+				}
+			}
+				
+			h1 {
+				margin-top: 0;
+			}
+			td {
+				width: 90%;
+				border-bottom: 1px black solid;
+			}
+
+			#behandeling_selector {
+				display: flex;
+				#selector_nagels {
+					width: 50%;
+					margin: 1%;
+				}
+				#selector_haar {
+					width: 50%;
+					margin: 1%;
+				}
+				h3 {
+					display: inline-block;
+					margin: 0;
+					width: fit-content;
+				}
+				.checkbox_title{
+					display: none;
+				}
+				
+				span {
+					display: inline-block;
+				}
+				// Nieuwe Set
+				#ns_option[type=checkbox]:checked ~ #checkbox_ns {
+					display: block;
+				}
+				#ns_n[type=checkbox]:checked ~ #radio_ns_n {
+					display: block;
+				}
+				#ns_fm[type=checkbox]:checked ~ #radio_ns_fm {
+					display: block;
+				}
+				#ns_g[type=checkbox]:checked ~ #radio_ns_g {
+					display: block;
+				}
+				#ns_option[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+				#ns_n[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+				#ns_fm[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+				#ns_g[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+				#ns_n_error {
+					display: none;
+					color: red;
+				}
+				#ns_fm_error {
+					display: none;
+					color: red;
+				}
+				#ns_g_error {
+					display: none;
+					color: red;
+				}
+				#nh_n_error {
+					display: none;
+					color: red;
+				}
+				#nh_fm_error {
+					display: none;
+					color: red;
+				}
+				#nh_g_error {
+					display: none;
+					color: red;
+				}
+
+				// Nabehandeling
+				#nh_option[type=checkbox]:checked ~ #checkbox_nh {
+					display: block;
+				}
+				#nh_n[type=checkbox]:checked ~ #radio_nh_n {
+					display: block;
+				}
+				#nh_fm[type=checkbox]:checked ~ #radio_nh_fm {
+					display: block;
+				}
+				#nh_g[type=checkbox]:checked ~ #radio_nh_g {
+					display: block;
+				}
+				#nh_option[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+				#nh_n[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+				#nh_fm[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+				#nh_g[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+
+				// Handen
+				#h_option[type=checkbox]:checked ~ #checkbox_h {
+					display: block;
+				}
+				#h_option[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+
+				// Voeten
+				#v_option[type=checkbox]:checked ~ #checkbox_v {
+					display: block;
+				}
+				#v_option[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+
+				// Dames
+				#d_option[type=checkbox]:checked ~ #checkbox_d {
+					display: block;
+				}
+				#d_option[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+
+				// Heren
+				#hr_option[type=checkbox]:checked ~ #checkbox_hr {
+					display: block;
+				}
+				#hr_option[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+
+				// Kinderen t/m 11 jaar
+				#k11_option[type=checkbox]:checked ~ #checkbox_k11 {
+					display: block;
+				}
+				#k11_option[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+
+				// Kinderen 12 t/m 15 jaar
+				#k12_option[type=checkbox]:checked ~ #checkbox_k12 {
+					display: block;
+				}
+				#k12_option[type=checkbox]:checked ~ span {
+					transform: rotate(90deg);
+				}
+
+				.checkbox_hide {
+					display: none;
+				}
+				.radio_hide {
+					display: none;
+				}
+			}
+
+			#price {
+				align-self: center;
+				h3 {
+					display: none;
+					align-self: center;
+					color: red;
+				}
+			}
+
+			#creatediv {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		#datum_tijd {
+			visibility: hidden;
+			height: 0;
+
+			width: 100%;
+			background-color: #14083d;
+			#calendar {
+				background-color: #230e6a;
+			}
+			#external-events {
+				width: 100%;
+				#event_box {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					div {
+						width: fit-content;
+						color: white;
+						background-color: #321497;
+						border-color: #321497;
+						padding: 1px;
+						margin: 1px;
+					}	
+				}
+			}
+		}
+
+
+
+		#afrekenen {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: fit-content;
+			width: 100%;
+			background-color: #14083d;
+		}
+
+		#bevestiging {
+			height: fit-content;
+			width: 100%;
+			background-color: #14083d;
+		}
+
+				
+		.nav1 {
+			display: flex;
+			align-items: center;
+			
+
+			button {
+				padding: 2vh;
+				border-radius: 10%;
+			}
+		}
+
+		.nav2 {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			button{
+				padding: 2vh;
+				margin: 1% 5%;
+				border-radius: 10%;
+			}
+		}
+	}
+}
+#signout {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: fit-content;
+	background-color: #14083d;
+}
+
+@media screen and (max-width: 900px) {
+	h1 {
+		font-size: 40px;
+	}
+	
+	h2 {
+		font-size: 28px;
+	}
+	
+	h3 {
+		font-size: 20px;
+	}
+	
+	p {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 500px) {
+	h1 {
+		font-size: 32px;
+	}
+	
+	h2 {
+		font-size: 20px;
+	}
+	
+	h3 {
+		font-size: 18px;
+	}
+	
+	p {
+		font-size: 16px;
+	}
+}
